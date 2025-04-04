@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{cfl_center}-{district}-{project_phase}",
+ "creation": "2025-04-04 12:55:59.189458",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cfl_center",
+  "district",
+  "column_break_byru",
+  "region",
+  "project_phase"
+ ],
+ "fields": [
+  {
+   "fieldname": "cfl_center",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CFL Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_byru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "district.region",
+   "fetch_if_empty": 1,
+   "fieldname": "region",
+   "fieldtype": "Link",
+   "is_virtual": 1,
+   "label": "Region",
+   "options": "Region"
+  },
+  {
+   "fetch_from": "region.project_phase",
+   "fieldname": "project_phase",
+   "fieldtype": "Link",
+   "is_virtual": 1,
+   "label": "Project Phase",
+   "options": "Project Phase"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-04 13:08:20.954316",
+ "modified_by": "Administrator",
+ "module": "Feet On Street",
+ "name": "CFL Center",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "cfl_center"
+}

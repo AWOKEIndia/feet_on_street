@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{block}-{cfl_center}",
+ "creation": "2025-04-04 14:50:19.296669",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "block",
+  "cfl_center",
+  "column_break_vzku",
+  "district",
+  "geographical_levels_column",
+  "region",
+  "state"
+ ],
+ "fields": [
+  {
+   "fieldname": "block",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Block Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cfl_center",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CFL Center",
+   "options": "CFL Center",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vzku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "cfl_center.district",
+   "fetch_if_empty": 1,
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "geographical_levels_column",
+   "fieldtype": "Column Break",
+   "label": "Geographical Levels"
+  },
+  {
+   "fetch_from": "cfl_center.region",
+   "fetch_if_empty": 1,
+   "fieldname": "region",
+   "fieldtype": "Link",
+   "label": "Region",
+   "options": "Region"
+  },
+  {
+   "fetch_from": "region.state",
+   "fetch_if_empty": 1,
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-04 14:59:47.130506",
+ "modified_by": "Administrator",
+ "module": "Feet On Street",
+ "name": "Block",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "block"
+}

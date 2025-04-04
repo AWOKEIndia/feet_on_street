@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:region",
+ "creation": "2025-04-04 11:37:54.097162",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "region_data_section",
+  "region",
+  "state",
+  "column_break_alda",
+  "project_phase"
+ ],
+ "fields": [
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Region",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_alda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_phase",
+   "fieldtype": "Link",
+   "label": "Project Phase",
+   "options": "Project Phase",
+   "reqd": 1
+  },
+  {
+   "fieldname": "region_data_section",
+   "fieldtype": "Section Break",
+   "label": "Region Data"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "State",
+   "options": "State",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-04 13:37:04.756042",
+ "modified_by": "Administrator",
+ "module": "Feet On Street",
+ "name": "Region",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "search_fields": "region",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "region"
+}
