@@ -1,7 +1,7 @@
 {
   "actions": [],
   "allow_rename": 1,
-  "autoname": "format:CFL-S_{cfl_center}_{YYYY}{MM}####",
+  "autoname": "format:CFL-S_{YYYY}{MM}{###}",
   "creation": "2025-04-04 15:47:24.861200",
   "doctype": "DocType",
   "engine": "InnoDB",
@@ -10,6 +10,7 @@
     "trainer_name",
     "date",
     "participant_count",
+    "status",
     "column_break_zehv",
     "feedback",
     "employee",
@@ -28,17 +29,26 @@
     "cfl_center",
     "district",
     "region",
-    "state"
+    "state",
+    "session_image_1",
+    "session_image_2",
+    "session_image_3",
+    "session_image_4",
+    "participant_list_attach_page_1",
+    "participant_list_attach_page_2",
+    "participant_list_attach_page_3"
   ],
   "fields": [
     {
       "fieldname": "block",
       "fieldtype": "Link",
       "label": "Block",
-      "options": "Block"
+      "options": "Block",
+      "reqd": 1
     },
     {
       "fetch_from": "block.cfl_center",
+      "fetch_if_empty": 1,
       "fieldname": "cfl_center",
       "fieldtype": "Link",
       "label": "CFL Center",
@@ -99,6 +109,7 @@
     },
     {
       "fetch_from": "cfl_center.region",
+      "fetch_if_empty": 1,
       "fieldname": "region",
       "fieldtype": "Link",
       "label": "Region",
@@ -106,6 +117,7 @@
     },
     {
       "fetch_from": "region.state",
+      "fetch_if_empty": 1,
       "fieldname": "state",
       "fieldtype": "Link",
       "label": "State",
@@ -155,7 +167,6 @@
       "label": "Participant List Page 1",
       "reqd": 1
     },
-    {
       "fieldname": "participant_list_page_2",
       "fieldtype": "Attach Image",
       "label": "Participant List Page 2"
@@ -164,6 +175,12 @@
       "fieldname": "participant_list_page_3",
       "fieldtype": "Attach Image",
       "label": "Participant List Page 3"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Submitted\nUnder Review\nApproved\nRejected"
     }
   ],
   "grid_page_length": 50,
