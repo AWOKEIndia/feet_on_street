@@ -1,7 +1,7 @@
 {
   "actions": [],
   "allow_rename": 1,
-  "autoname": "format:CFL-S_{cfl_center}_{YYYY}{MM}#####",
+  "autoname": "format:CFL-S_{YYYY}{MM}{###}",
   "creation": "2025-04-04 15:47:24.861200",
   "doctype": "DocType",
   "engine": "InnoDB",
@@ -34,10 +34,12 @@
       "fieldname": "block",
       "fieldtype": "Link",
       "label": "Block",
-      "options": "Block"
+      "options": "Block",
+      "reqd": 1
     },
     {
       "fetch_from": "block.cfl_center",
+      "fetch_if_empty": 1,
       "fieldname": "cfl_center",
       "fieldtype": "Link",
       "label": "CFL Center",
@@ -121,6 +123,7 @@
     },
     {
       "fetch_from": "cfl_center.region",
+      "fetch_if_empty": 1,
       "fieldname": "region",
       "fieldtype": "Link",
       "label": "Region",
@@ -128,6 +131,7 @@
     },
     {
       "fetch_from": "region.state",
+      "fetch_if_empty": 1,
       "fieldname": "state",
       "fieldtype": "Link",
       "label": "State",
@@ -167,7 +171,7 @@
   "image_field": "session_image_1",
   "index_web_pages_for_search": 1,
   "links": [],
-  "modified": "2025-04-15 10:46:53.565301",
+  "modified": "2025-04-15 14:52:46.752725",
   "modified_by": "Administrator",
   "module": "Feet On Street",
   "name": "CFL Session",
