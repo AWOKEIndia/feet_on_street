@@ -1,7 +1,7 @@
 {
   "actions": [],
   "allow_rename": 1,
-  "autoname": "format:CFL-S/C-{cfl_center}/{YYYY}/{MM}/####",
+  "autoname": "format:CFL-S_{cfl_center}_{YYYY}{MM}#####",
   "creation": "2025-04-04 15:47:24.861200",
   "doctype": "DocType",
   "engine": "InnoDB",
@@ -10,8 +10,7 @@
     "trainer_name",
     "date",
     "participant_count",
-    "session_image",
-    "participant_list_attach",
+    "status",
     "column_break_zehv",
     "feedback",
     "employee",
@@ -21,7 +20,14 @@
     "cfl_center",
     "district",
     "region",
-    "state"
+    "state",
+    "session_image_1",
+    "session_image_2",
+    "session_image_3",
+    "session_image_4",
+    "participant_list_attach_page_1",
+    "participant_list_attach_page_2",
+    "participant_list_attach_page_3"
   ],
   "fields": [
     {
@@ -89,8 +95,7 @@
     {
       "fieldname": "session_image_4",
       "fieldtype": "Attach Image",
-      "label": "Training Session Photo 4",
-      "reqd": 0
+      "label": "Training Session Photo 4"
     },
     {
       "fieldname": "column_break_zehv",
@@ -137,14 +142,12 @@
     {
       "fieldname": "participant_list_attach_page_2",
       "fieldtype": "Attach Image",
-      "label": "Training Participant List Page 2",
-      "reqd": 0
+      "label": "Training Participant List Page 2"
     },
     {
       "fieldname": "participant_list_attach_page_3",
       "fieldtype": "Attach Image",
-      "label": "Training Participant List Page 3",
-      "reqd": 0
+      "label": "Training Participant List Page 3"
     },
     {
       "fieldname": "employee",
@@ -152,13 +155,19 @@
       "label": "Employee",
       "options": "Employee",
       "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Submitted\nUnder Review\nApproved\nRejected"
     }
   ],
   "grid_page_length": 50,
-  "image_field": "session_image",
+  "image_field": "session_image_1",
   "index_web_pages_for_search": 1,
   "links": [],
-  "modified": "2025-04-04 16:24:29.650415",
+  "modified": "2025-04-15 10:46:53.565301",
   "modified_by": "Administrator",
   "module": "Feet On Street",
   "name": "CFL Session",
@@ -175,6 +184,12 @@
       "report": 1,
       "role": "System Manager",
       "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Employee Self Service",
       "write": 1
     }
   ],
