@@ -167,6 +167,7 @@
       "label": "Participant List Page 1",
       "reqd": 1
     },
+    {
       "fieldname": "participant_list_page_2",
       "fieldtype": "Attach Image",
       "label": "Participant List Page 2"
