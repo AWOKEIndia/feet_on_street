@@ -1,242 +1,235 @@
 {
-  "actions": [],
-  "allow_rename": 1,
-  "autoname": "format:CFL-S_{YYYY}{MM}{###}",
-  "creation": "2025-04-04 15:47:24.861200",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "session_information_section",
-    "trainer_name",
-    "date",
-    "participant_count",
-    "status",
-    "column_break_zehv",
-    "feedback",
-    "employee",
-    "section_break_hlax",
-    "session_image_1",
-    "session_image_2",
-    "session_image_3",
-    "session_image_4",
-    "column_break_wjpp",
-    "participant_list_page_1",
-    "participant_list_page_2",
-    "participant_list_page_3",
-    "geographical_data_section",
-    "village",
-    "block",
-    "cfl_center",
-    "district",
-    "region",
-    "state",
-    "session_image_1",
-    "session_image_2",
-    "session_image_3",
-    "session_image_4",
-    "participant_list_attach_page_1",
-    "participant_list_attach_page_2",
-    "participant_list_attach_page_3"
-  ],
-  "fields": [
-    {
-      "fieldname": "block",
-      "fieldtype": "Link",
-      "label": "Block",
-      "options": "Block",
-      "reqd": 1
-    },
-    {
-      "fetch_from": "block.cfl_center",
-      "fetch_if_empty": 1,
-      "fieldname": "cfl_center",
-      "fieldtype": "Link",
-      "label": "CFL Center",
-      "options": "CFL Center"
-    },
-    {
-      "fetch_from": "block.district",
-      "fetch_if_empty": 1,
-      "fieldname": "district",
-      "fieldtype": "Link",
-      "label": "District",
-      "options": "District"
-    },
-    {
-      "fieldname": "session_information_section",
-      "fieldtype": "Section Break",
-      "label": "Session Information"
-    },
-    {
-      "fieldname": "trainer_name",
-      "fieldtype": "Data",
-      "label": "Trainer Name"
-    },
-    {
-      "allow_in_quick_entry": 1,
-      "fieldname": "date",
-      "fieldtype": "Date",
-      "label": "Training Session Date",
-      "reqd": 1
-    },
-    {
-      "fieldname": "participant_count",
-      "fieldtype": "Int",
-      "label": "Participant Count",
-      "reqd": 1
-    },
-    {
-      "fieldname": "column_break_zehv",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "feedback",
-      "fieldtype": "Text",
-      "label": "Note/Feedback"
-    },
-    {
-      "fieldname": "geographical_data_section",
-      "fieldtype": "Section Break",
-      "label": "GeoGraphical Data"
-    },
-    {
-      "allow_in_quick_entry": 1,
-      "fieldname": "village",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Village",
-      "reqd": 1
-    },
-    {
-      "fetch_from": "cfl_center.region",
-      "fetch_if_empty": 1,
-      "fieldname": "region",
-      "fieldtype": "Link",
-      "label": "Region",
-      "options": "Region"
-    },
-    {
-      "fetch_from": "region.state",
-      "fetch_if_empty": 1,
-      "fieldname": "state",
-      "fieldtype": "Link",
-      "label": "State",
-      "options": "State"
-    },
-    {
-      "fieldname": "employee",
-      "fieldtype": "Link",
-      "label": "Employee",
-      "options": "Employee",
-      "reqd": 1
-    },
-    {
-      "fieldname": "session_image_1",
-      "fieldtype": "Attach Image",
-      "label": "Training Photo 1",
-      "reqd": 1
-    },
-    {
-      "fieldname": "section_break_hlax",
-      "fieldtype": "Section Break",
-      "label": "Attachment"
-    },
-    {
-      "fieldname": "session_image_2",
-      "fieldtype": "Attach Image",
-      "label": "Training Photo 2",
-      "reqd": 1
-    },
-    {
-      "fieldname": "session_image_3",
-      "fieldtype": "Attach Image",
-      "label": "Training Photo 3"
-    },
-    {
-      "fieldname": "session_image_4",
-      "fieldtype": "Attach Image",
-      "label": "Training Photo 4"
-    },
-    {
-      "fieldname": "column_break_wjpp",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "participant_list_page_1",
-      "fieldtype": "Attach Image",
-      "label": "Participant List Page 1",
-      "reqd": 1
-    },
-    {
-      "fieldname": "participant_list_page_2",
-      "fieldtype": "Attach Image",
-      "label": "Participant List Page 2"
-    },
-    {
-      "fieldname": "participant_list_page_3",
-      "fieldtype": "Attach Image",
-      "label": "Participant List Page 3"
-    },
-    {
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "label": "Status",
-      "options": "Submitted\nUnder Review\nApproved\nRejected"
-    }
-  ],
-  "grid_page_length": 50,
-  "image_field": "session_image_1",
-  "index_web_pages_for_search": 1,
-  "links": [],
-  "modified": "2025-04-15 11:14:53.154813",
-  "modified_by": "Administrator",
-  "module": "Feet On Street",
-  "name": "CFL Session",
-  "naming_rule": "Expression",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "create": 1,
-      "read": 1,
-      "role": "Employee Self Service",
-      "write": 1
-    }
-  ],
-  "quick_entry": 1,
-  "row_format": "Dynamic",
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "states": [
-    {
-      "color": "Yellow",
-      "title": "Under Review"
-    },
-    {
-      "color": "Blue",
-      "title": "Submitted"
-    },
-    {
-      "color": "Green",
-      "title": "Approved"
-    },
-    {
-      "color": "Red",
-      "title": "Rejected"
-    }
-  ],
-  "track_changes": 1,
-  "track_seen": 1,
-  "track_views": 1
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CFL-S_{YYYY}{MM}{###}",
+ "creation": "2025-04-04 15:47:24.861200",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "session_information_section",
+  "trainer_name",
+  "date",
+  "participant_count",
+  "status",
+  "column_break_zehv",
+  "feedback",
+  "employee",
+  "section_break_hlax",
+  "session_image_1",
+  "session_image_2",
+  "session_image_3",
+  "session_image_4",
+  "column_break_wjpp",
+  "participant_list_page_1",
+  "participant_list_page_2",
+  "participant_list_page_3",
+  "geographical_data_section",
+  "village",
+  "block",
+  "cfl_center",
+  "district",
+  "region",
+  "state"
+ ],
+ "fields": [
+  {
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Block",
+   "options": "Block",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "block.cfl_center",
+   "fetch_if_empty": 1,
+   "fieldname": "cfl_center",
+   "fieldtype": "Link",
+   "label": "CFL Center",
+   "options": "CFL Center"
+  },
+  {
+   "fetch_from": "block.district",
+   "fetch_if_empty": 1,
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "session_information_section",
+   "fieldtype": "Section Break",
+   "label": "Session Information"
+  },
+  {
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "label": "Trainer Name"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Training Session Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_count",
+   "fieldtype": "Int",
+   "label": "Participant Count",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zehv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Text",
+   "label": "Note/Feedback"
+  },
+  {
+   "fieldname": "geographical_data_section",
+   "fieldtype": "Section Break",
+   "label": "GeoGraphical Data"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Village",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "cfl_center.region",
+   "fetch_if_empty": 1,
+   "fieldname": "region",
+   "fieldtype": "Link",
+   "label": "Region",
+   "options": "Region"
+  },
+  {
+   "fetch_from": "region.state",
+   "fetch_if_empty": 1,
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_image_1",
+   "fieldtype": "Attach Image",
+   "label": "Training Photo 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_hlax",
+   "fieldtype": "Section Break",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "session_image_2",
+   "fieldtype": "Attach Image",
+   "label": "Training Photo 2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_image_3",
+   "fieldtype": "Attach Image",
+   "label": "Training Photo 3"
+  },
+  {
+   "fieldname": "session_image_4",
+   "fieldtype": "Attach Image",
+   "label": "Training Photo 4"
+  },
+  {
+   "fieldname": "column_break_wjpp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "participant_list_page_1",
+   "fieldtype": "Attach Image",
+   "label": "Participant List Page 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_list_page_2",
+   "fieldtype": "Attach Image",
+   "label": "Participant List Page 2"
+  },
+  {
+   "fieldname": "participant_list_page_3",
+   "fieldtype": "Attach Image",
+   "label": "Participant List Page 3"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Submitted\nUnder Review\nApproved\nRejected"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "session_image_1",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-19 10:28:08.710166",
+ "modified_by": "Administrator",
+ "module": "Feet On Street",
+ "name": "CFL Session",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Employee Self Service",
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Yellow",
+   "title": "Under Review"
+  },
+  {
+   "color": "Blue",
+   "title": "Submitted"
+  },
+  {
+   "color": "Green",
+   "title": "Approved"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }
