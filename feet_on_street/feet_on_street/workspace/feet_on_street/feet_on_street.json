@@ -1,0 +1,174 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"HbdOIALGjt\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Feet On Street - CFL Survey Management</b></span>\",\"col\":12}},{\"id\":\"Xour__Skpm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New CFL Session\",\"col\":4}},{\"id\":\"qdK6XJfqVK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Total Sessions\",\"col\":4}},{\"id\":\"bnwaStXXum\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Under Review\",\"col\":4}},{\"id\":\"RmqUxTjDcD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CFL Centers\",\"col\":3}},{\"id\":\"WW-zz3whyA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XBPTQDzGGV\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"TT3jv5t4bV\",\"type\":\"card\",\"data\":{\"card_name\":\"Survey Management\",\"col\":4}},{\"id\":\"j_Q2u8Uw17\",\"type\":\"card\",\"data\":{\"card_name\":\"Geographic Setup\",\"col\":4}},{\"id\":\"07phcjjNTn\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":4}}]",
+ "creation": "2025-06-05 08:38:26.083239",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "table_2",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Feet On Street",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Survey Management",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CFL Session",
+   "link_count": 0,
+   "link_to": "CFL Session",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "New CFL Session",
+   "link_count": 0,
+   "link_to": "CFL Session",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Geographic Setup",
+   "link_count": 6,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Phase",
+   "link_count": 0,
+   "link_to": "Project Phase",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "State",
+   "link_count": 0,
+   "link_to": "State",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Region",
+   "link_count": 0,
+   "link_to": "Region",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "District",
+   "link_count": 0,
+   "link_to": "District",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CFL Center",
+   "link_count": 0,
+   "link_to": "CFL Center",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Block",
+   "link_count": 0,
+   "link_to": "Block",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports & Analytics",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CFL Session List",
+   "link_count": 0,
+   "link_to": "CFL Session",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-06-05 09:11:17.189123",
+ "modified_by": "Administrator",
+ "module": "Feet On Street",
+ "name": "Feet On Street",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "format": "{} Active",
+   "label": "New CFL Session",
+   "link_to": "CFL Session",
+   "stats_filter": "{\"status\": \"Submitted\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "format": "{} Total",
+   "label": "Total Sessions",
+   "link_to": "CFL Session",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "{} Pending",
+   "label": "Under Review",
+   "link_to": "CFL Session",
+   "stats_filter": "{\"status\": \"Under Review\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "format": "{} Centers",
+   "label": "CFL Centers",
+   "link_to": "CFL Center",
+   "type": "DocType"
+  }
+ ],
+ "title": "Feet On Street"
+}
