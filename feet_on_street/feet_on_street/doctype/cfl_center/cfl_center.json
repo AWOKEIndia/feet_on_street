@@ -1,62 +1,96 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "format:{cfl_center}-{district}",
+ "naming_rule": "Expression",
+ "autoname": "format:{region}-CFL{center_number:02d}",
  "creation": "2025-04-04 12:55:59.189458",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
- "field_order": [
-  "cfl_center",
-  "district",
-  "column_break_byru",
-  "region",
-  "project_phase"
- ],
  "fields": [
   {
-   "fieldname": "cfl_center",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "CFL Center",
+   "fieldname": "region",
+   "fieldtype": "Link",
+   "options": "Region",
+   "label": "Region",
    "reqd": 1
+  },
+  {
+   "fieldname": "center_number",
+   "fieldtype": "Int",
+   "label": "Center Number in Region",
+   "reqd": 1
+  },
+  {
+   "fieldname": "center_name",
+   "fieldtype": "Data",
+   "label": "CFL Center Name",
+   "reqd": 1,
+   "in_list_view": 1
   },
   {
    "fieldname": "district",
    "fieldtype": "Link",
-   "label": "District",
    "options": "District",
+   "label": "District",
    "reqd": 1
   },
   {
-   "fieldname": "column_break_byru",
-   "fieldtype": "Column Break"
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Center Address"
   },
   {
-   "fetch_from": "district.region",
-   "fetch_if_empty": 1,
-   "fieldname": "region",
-   "fieldtype": "Link",
-   "label": "Region",
-   "options": "Region"
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "PIN Code"
   },
   {
-   "fetch_from": "region.project_phase",
-   "fetch_if_empty": 1,
-   "fieldname": "project_phase",
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": 8
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": 8
+  },
+  {
+   "fieldname": "company",
    "fieldtype": "Link",
-   "label": "Project Phase",
-   "options": "Project Phase"
+   "fetch_from": "region.company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "fetch_from": "region.state",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phase_number",
+   "fieldtype": "Int",
+   "fetch_from": "region.phase_number",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-15 14:42:58.249028",
+ "modified": "2025-06-01 14:42:58.249028",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "CFL Center",
- "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -76,5 +110,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "cfl_center"
+ "title_field": "center_name"
 }

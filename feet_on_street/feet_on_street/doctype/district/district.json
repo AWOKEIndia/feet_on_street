@@ -1,57 +1,65 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "format:{district}-{region}-{state}-{project_phase}",
+ "naming_rule": "By fieldname",
+ "autoname": "field:district_code",
  "creation": "2025-04-04 12:16:55.581764",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
- "field_order": [
-  "district",
-  "column_break_uhpk",
-  "region",
-  "project_phase"
- ],
  "fields": [
   {
-   "fieldname": "district",
+   "fieldname": "district_code",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "District",
+   "label": "District Code (Census 2011)",
    "reqd": 1,
-   "unique": 1
+   "unique": 1,
+   "description": "3-digit code like 001, 002 etc within state"
   },
   {
-   "fieldname": "column_break_uhpk",
-   "fieldtype": "Column Break"
+   "fieldname": "full_district_code",
+   "fieldtype": "Data",
+   "label": "Full District Code",
+   "read_only": 1,
+   "description": "State Code + District Code (e.g., 09001)"
+  },
+  {
+   "fieldname": "district_name",
+   "fieldtype": "Data",
+   "label": "District Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "district_name_hindi",
+   "fieldtype": "Data",
+   "label": "District Name (Hindi)"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "options": "State",
+   "label": "State",
+   "reqd": 1
   },
   {
    "fieldname": "region",
    "fieldtype": "Link",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "label": "Region",
    "options": "Region",
-   "reqd": 1
+   "label": "Assigned Region",
+   "description": "Which region this district belongs to in current phase"
   },
   {
-   "fetch_from": "region.project_phase",
-   "fetch_if_empty": 1,
-   "fieldname": "project_phase",
-   "fieldtype": "Link",
-   "in_filter": 1,
-   "label": "Project Phase",
-   "options": "Project Phase"
+   "fieldname": "headquarters",
+   "fieldtype": "Data",
+   "label": "District Headquarters"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-15 14:38:56.193497",
+ "modified": "2025-06-01 14:38:56.193497",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "District",
- "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -67,10 +75,5 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
- "row_format": "Dynamic",
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "title_field": "district"
+ "title_field": "district_name"
 }
