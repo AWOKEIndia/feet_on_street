@@ -188,7 +188,7 @@
  "sequence_id": 2.0,
  "shortcuts": [
   {
-   "color": "Green",
+   "color": "Orange",
    "format": "{} New",
    "label": "New CFL Session",
    "link_to": "CFL Session",
@@ -196,18 +196,19 @@
    "type": "DocType"
   },
   {
-   "color": "Blue",
+   "color": "Green",
    "format": "{} Total",
    "label": "Total Sessions",
    "link_to": "CFL Session",
+   "stats_filter": "{\"docstatus\": \"2\"}",
    "type": "DocType"
   },
   {
-   "color": "Orange",
-   "format": "{} Pending",
+   "color": "Blue",
+   "format": "{} Submitted",
    "label": "Under Review",
    "link_to": "CFL Session",
-   "stats_filter": "{\"_state\": \"Under Review\"}",
+   "stats_filter": "{\"docstatus\": \"1\"}",
    "type": "DocType"
   },
   {
