@@ -16,31 +16,42 @@
   {
    "fieldname": "block",
    "fetch_from": "village.block",
+   "fieldtype": "Link",
+   "label": "Block",
    "read_only": 1
   },
   {
    "fieldname": "cfl_center",
    "fetch_from": "village.block.cfl_center",
+   "label": "CFL Center",
    "read_only": 1
   },
   {
    "fieldname": "district",
    "fetch_from": "village.block.district",
+   "fieldtype": "Link",
+   "label": "District",
    "read_only": 1
   },
   {
    "fieldname": "region",
    "fetch_from": "village.block.cfl_center.region",
+   "fieldtype": "Link",
+   "label": "Region",
    "read_only": 1
   },
   {
    "fieldname": "company",
    "fetch_from": "village.block.cfl_center.company",
+   "fieldtype": "Link",
+   "label": "Company",
    "read_only": 1
   },
   {
    "fieldname": "phase_number",
    "fetch_from": "village.block.cfl_center.phase_number",
+   "fieldtype": "Link",
+   "label": "Phase Number",
    "read_only": 1
   }
  ],
