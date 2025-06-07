@@ -43,34 +43,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Project Management",
-   "link_count": 2,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Project Phase",
-   "link_count": 0,
-   "link_to": "Project Phase",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Project Allocation",
-   "link_count": 0,
-   "link_to": "Project Allocation",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Geographic Setup",
    "link_count": 6,
    "onboard": 0,
@@ -173,9 +145,28 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Management",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Phase",
+   "link_count": 0,
+   "link_to": "Project Phase",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-06-07 12:10:00.000000",
+ "modified": "2025-06-07 14:10:37.355587",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Feet On Street",
