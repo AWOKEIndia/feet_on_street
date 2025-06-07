@@ -5,61 +5,193 @@
  "creation": "2025-04-04 15:47:24.861200",
  "doctype": "DocType",
  "engine": "InnoDB",
+ "field_order": [
+  "training_session_info_section",
+  "participants",
+  "head_count",
+  "males",
+  "females",
+  "column_break_tufd",
+  "feedback",
+  "geographical_data_section",
+  "village",
+  "block",
+  "cfl_center",
+  "district",
+  "column_break_sxmw",
+  "region",
+  "company",
+  "section_break_aiqi",
+  "gps_location",
+  "section_break_nqtu",
+  "session_image_1",
+  "session_image_2",
+  "session_image_3",
+  "session_image_4",
+  "column_break_ojqr",
+  "participant_list_image_1",
+  "participant_list_image_2",
+  "participant_list_image_3"
+ ],
  "fields": [
   {
    "fieldname": "village",
    "fieldtype": "Link",
-   "options": "Village",
+   "in_list_view": 1,
    "label": "Village",
+   "options": "Village",
    "reqd": 1
   },
   {
-   "fieldname": "block",
    "fetch_from": "village.block",
+   "fetch_if_empty": 1,
+   "fieldname": "block",
    "fieldtype": "Link",
    "label": "Block",
+   "options": "Block",
    "read_only": 1
   },
   {
+   "fetch_from": "block.cfl_center",
+   "fetch_if_empty": 1,
    "fieldname": "cfl_center",
-   "fetch_from": "village.block.cfl_center",
+   "fieldtype": "Link",
    "label": "CFL Center",
+   "options": "CFL Center",
    "read_only": 1
   },
   {
+   "fetch_from": "cfl_center.district",
+   "fetch_if_empty": 1,
    "fieldname": "district",
-   "fetch_from": "village.block.district",
    "fieldtype": "Link",
    "label": "District",
+   "options": "District",
    "read_only": 1
   },
   {
+   "fetch_from": "district.region",
+   "fetch_if_empty": 1,
    "fieldname": "region",
-   "fetch_from": "village.block.cfl_center.region",
    "fieldtype": "Link",
    "label": "Region",
+   "options": "Region",
    "read_only": 1
   },
   {
+   "fetch_from": "region.company",
+   "fetch_if_empty": 1,
    "fieldname": "company",
-   "fetch_from": "village.block.cfl_center.company",
    "fieldtype": "Link",
    "label": "Company",
+   "options": "Company",
    "read_only": 1
   },
   {
-   "fieldname": "phase_number",
-   "fetch_from": "village.block.cfl_center.phase_number",
-   "fieldtype": "Link",
-   "label": "Phase Number",
-   "read_only": 1
+   "fieldname": "geographical_data_section",
+   "fieldtype": "Section Break",
+   "label": "Geographical Data"
+  },
+  {
+   "fieldname": "section_break_nqtu",
+   "fieldtype": "Section Break",
+   "label": "Session Photos & Attendance Sheet"
+  },
+  {
+   "fieldname": "session_image_1",
+   "fieldtype": "Attach Image",
+   "label": "Session Image 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_image_2",
+   "fieldtype": "Attach Image",
+   "label": "Session Image 2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_image_3",
+   "fieldtype": "Attach Image",
+   "label": "Session Image 3"
+  },
+  {
+   "fieldname": "session_image_4",
+   "fieldtype": "Attach Image",
+   "label": "Session Image 4"
+  },
+  {
+   "fieldname": "column_break_ojqr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "participant_list_image_1",
+   "fieldtype": "Attach Image",
+   "label": "Participant List Image 1st Page",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_list_image_2",
+   "fieldtype": "Attach Image",
+   "label": "Participant List Image 2nd Page"
+  },
+  {
+   "fieldname": "participant_list_image_3",
+   "fieldtype": "Attach Image",
+   "label": "Participant List Image 3"
+  },
+  {
+   "fieldname": "training_session_info_section",
+   "fieldtype": "Section Break",
+   "label": "Training Session Info"
+  },
+  {
+   "fieldname": "participants",
+   "fieldtype": "Int",
+   "label": "Number of Participants",
+   "reqd": 1
+  },
+  {
+   "fieldname": "head_count",
+   "fieldtype": "Int",
+   "label": "Head Count"
+  },
+  {
+   "fieldname": "males",
+   "fieldtype": "Int",
+   "label": "Number of Males"
+  },
+  {
+   "fieldname": "females",
+   "fieldtype": "Int",
+   "label": "Number of Females"
+  },
+  {
+   "fieldname": "column_break_tufd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Long Text",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "column_break_sxmw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_aiqi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gps_location",
+   "fieldtype": "Geolocation",
+   "label": "GPS location"
   }
  ],
  "grid_page_length": 50,
- "image_field": "session_image_1",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-01 10:28:08.710166",
+ "modified": "2025-06-07 12:05:28.404897",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "CFL Session",

@@ -35,6 +35,7 @@
    "fieldtype": "Link",
    "fetch_from": "project_allocation.company",
    "options": "Company",
+   "label": "Company",
    "read_only": 1
   },
   {
