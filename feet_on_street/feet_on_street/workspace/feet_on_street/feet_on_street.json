@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"id\":\"HbdOIALGjt\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Feet On Street - CFL Survey Management</b></span>\",\"col\":12}},{\"id\":\"Xour__Skpm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New CFL Session\",\"col\":3}},{\"id\":\"qdK6XJfqVK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Total Sessions\",\"col\":3}},{\"id\":\"bnwaStXXum\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Under Review\",\"col\":3}},{\"id\":\"RmqUxTjDcD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CFL Centers\",\"col\":3}},{\"id\":\"WW-zz3whyA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XBPTQDzGGV\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"TT3jv5t4bV\",\"type\":\"card\",\"data\":{\"card_name\":\"Survey Management\",\"col\":3}},{\"id\":\"j_Q2u8Uw17\",\"type\":\"card\",\"data\":{\"card_name\":\"Geographic Setup\",\"col\":3}},{\"id\":\"ProjectMgmt\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Management\",\"col\":3}},{\"id\":\"07phcjjNTn\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":3}}]",
+ "charts": [
+  {
+   "chart_name": "Session Chart",
+   "label": "Session Heat Map"
+  }
+ ],
+ "content": "[{\"id\":\"HbdOIALGjt\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Feet On Street - CFL Survey Management</b></span>\",\"col\":12}},{\"id\":\"T6oXYQrp9N\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Session Heat Map\",\"col\":12}},{\"id\":\"zp4-3_SScs\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Xour__Skpm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New CFL Session\",\"col\":3}},{\"id\":\"qdK6XJfqVK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Total Sessions\",\"col\":3}},{\"id\":\"bnwaStXXum\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Under Review\",\"col\":3}},{\"id\":\"RmqUxTjDcD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CFL Centers\",\"col\":3}},{\"id\":\"WW-zz3whyA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XBPTQDzGGV\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"TT3jv5t4bV\",\"type\":\"card\",\"data\":{\"card_name\":\"Survey Management\",\"col\":3}},{\"id\":\"j_Q2u8Uw17\",\"type\":\"card\",\"data\":{\"card_name\":\"Geographic Setup\",\"col\":3}},{\"id\":\"ProjectMgmt\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Management\",\"col\":3}},{\"id\":\"07phcjjNTn\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":3}}]",
  "creation": "2025-06-05 08:38:26.083239",
  "custom_blocks": [],
  "docstatus": 0,
@@ -24,6 +29,16 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "CFL Session",
+   "link_count": 0,
+   "link_to": "CFL Session",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "New CFL Session",
    "link_count": 0,
    "link_to": "CFL Session",
    "link_type": "DocType",
@@ -156,7 +171,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-06-07 15:10:37.355587",
+ "modified": "2025-06-07 15:31:04.386146",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Feet On Street",
