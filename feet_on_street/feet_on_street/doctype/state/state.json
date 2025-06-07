@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "field:state_code",
  "creation": "2025-04-04 13:15:05.646683",
  "doctype": "DocType",
@@ -34,7 +35,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-07 15:23:53.831233",
+ "modified": "2025-06-07 16:29:07.616478",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "State",

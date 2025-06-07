@@ -1,34 +1,44 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
- "naming_rule": "By fieldname",
  "autoname": "field:village_code",
  "creation": "2025-06-06 07:46:57.424385",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
+ "field_order": [
+  "village_code",
+  "full_village_code",
+  "village_name",
+  "village_name_hindi",
+  "block",
+  "population_2011",
+  "literacy_rate",
+  "total_households"
+ ],
  "fields": [
   {
+   "description": "6-digit village code within block",
    "fieldname": "village_code",
    "fieldtype": "Data",
    "label": "Village Code (Census 2011)",
    "reqd": 1,
-   "unique": 1,
-   "description": "6-digit village code within block"
+   "unique": 1
   },
   {
+   "description": "Complete census code including state+district+block+village",
    "fieldname": "full_village_code",
    "fieldtype": "Data",
    "label": "Full Village Code",
-   "read_only": 1,
-   "description": "Complete census code including state+district+block+village"
+   "read_only": 1
   },
   {
    "fieldname": "village_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Village Name",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "village_name_hindi",
@@ -38,8 +48,8 @@
   {
    "fieldname": "block",
    "fieldtype": "Link",
-   "options": "Block",
    "label": "Block",
+   "options": "Block",
    "reqd": 1
   },
   {
@@ -61,10 +71,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-06 07:46:57.424385",
+ "modified": "2025-06-07 16:34:27.600209",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Village",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -84,5 +95,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "village_name"
+ "title_field": "village_name",
+ "track_changes": 1
 }

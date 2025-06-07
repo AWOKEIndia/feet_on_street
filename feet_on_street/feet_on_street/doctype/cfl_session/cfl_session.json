@@ -3,6 +3,7 @@
  "allow_rename": 1,
  "autoname": "format:CFL-S_{YYYY}{MM}{###}",
  "creation": "2025-04-04 15:47:24.861200",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -191,7 +192,8 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-07 12:05:28.404897",
+ "make_attachments_public": 1,
+ "modified": "2025-06-07 16:33:48.093796",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "CFL Session",
@@ -217,6 +219,7 @@
    "write": 1
   }
  ],
+ "protect_attached_files": 1,
  "quick_entry": 1,
  "row_format": "Dynamic",
  "sort_field": "modified",

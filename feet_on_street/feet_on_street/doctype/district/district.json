@@ -1,32 +1,42 @@
 {
- "naming_rule": "By fieldname",
+ "actions": [],
+ "allow_import": 1,
  "autoname": "field:district_code",
  "creation": "2025-04-04 12:16:55.581764",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
+ "field_order": [
+  "district_code",
+  "full_district_code",
+  "district_name",
+  "district_name_hindi",
+  "state",
+  "region",
+  "headquarters"
+ ],
  "fields": [
   {
+   "description": "3-digit code like 001, 002 etc within state",
    "fieldname": "district_code",
    "fieldtype": "Data",
    "label": "District Code (Census 2011)",
    "reqd": 1,
-   "unique": 1,
-   "description": "3-digit code like 001, 002 etc within state"
+   "unique": 1
   },
   {
+   "description": "State Code + District Code (e.g., 09001)",
    "fieldname": "full_district_code",
    "fieldtype": "Data",
    "label": "Full District Code",
-   "read_only": 1,
-   "description": "State Code + District Code (e.g., 09001)"
+   "read_only": 1
   },
   {
    "fieldname": "district_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "District Name",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "district_name_hindi",
@@ -36,16 +46,16 @@
   {
    "fieldname": "state",
    "fieldtype": "Link",
-   "options": "State",
    "label": "State",
+   "options": "State",
    "reqd": 1
   },
   {
+   "description": "Which region this district belongs to in current phase",
    "fieldname": "region",
    "fieldtype": "Link",
-   "options": "Region",
    "label": "Assigned Region",
-   "description": "Which region this district belongs to in current phase"
+   "options": "Region"
   },
   {
    "fieldname": "headquarters",
@@ -56,10 +66,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-01 14:38:56.193497",
+ "modified": "2025-06-07 16:34:42.170905",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "District",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -75,5 +86,9 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
  "title_field": "district_name"
 }
