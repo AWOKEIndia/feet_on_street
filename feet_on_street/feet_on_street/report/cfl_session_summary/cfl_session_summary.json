@@ -16,14 +16,6 @@
    "wildcard_filter": 0
   },
   {
-   "fieldname": "phase_number",
-   "fieldtype": "Select",
-   "label": "Phase",
-   "mandatory": 0,
-   "options": "2\n3",
-   "wildcard_filter": 0
-  },
-  {
    "fieldname": "state",
    "fieldtype": "Link",
    "label": "State",

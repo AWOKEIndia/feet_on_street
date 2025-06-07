@@ -1,16 +1,32 @@
 {
- "naming_rule": "Expression",
+ "actions": [],
  "autoname": "format:{region}-CFL{center_number:02d}",
  "creation": "2025-04-04 12:55:59.189458",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
+ "field_order": [
+  "center_number",
+  "center_name",
+  "district",
+  "address",
+  "pincode",
+  "contact_person",
+  "contact_number",
+  "latitude",
+  "longitude",
+  "column_break_ncpw",
+  "company",
+  "region",
+  "state",
+  "phase"
+ ],
  "fields": [
   {
    "fieldname": "region",
    "fieldtype": "Link",
-   "options": "Region",
    "label": "Region",
+   "options": "Region",
    "reqd": 1
   },
   {
@@ -22,15 +38,15 @@
   {
    "fieldname": "center_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "CFL Center Name",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "district",
    "fieldtype": "Link",
-   "options": "District",
    "label": "District",
+   "options": "District",
    "reqd": 1
   },
   {
@@ -57,40 +73,54 @@
    "fieldname": "latitude",
    "fieldtype": "Float",
    "label": "Latitude",
-   "precision": 8
+   "precision": "8"
   },
   {
    "fieldname": "longitude",
    "fieldtype": "Float",
    "label": "Longitude",
-   "precision": 8
+   "precision": "8"
   },
   {
+   "fetch_from": "region.company",
+   "fetch_if_empty": 1,
    "fieldname": "company",
    "fieldtype": "Link",
-   "fetch_from": "region.company",
+   "label": "Company",
+   "options": "Company",
    "read_only": 1
   },
   {
+   "fetch_from": "region.state",
+   "fetch_if_empty": 1,
    "fieldname": "state",
    "fieldtype": "Link",
-   "fetch_from": "region.state",
+   "label": "State",
+   "options": "State",
    "read_only": 1
   },
   {
-   "fieldname": "phase_number",
-   "fieldtype": "Int",
-   "fetch_from": "region.phase_number",
+   "fetch_from": "region.phase",
+   "fetch_if_empty": 1,
+   "fieldname": "phase",
+   "fieldtype": "Link",
+   "label": "Project Phase",
+   "options": "Project Phase",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ncpw",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-01 14:42:58.249028",
+ "modified": "2025-06-07 14:56:14.027213",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "CFL Center",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
