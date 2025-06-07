@@ -1,0 +1,46 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-06-07 07:48:54.418901",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "region",
+   "fieldtype": "Link",
+   "label": "Region",
+   "mandatory": 0,
+   "options": "Region",
+   "wildcard_filter": 0
+  },
+  {
+   "default": "2025-06",
+   "fieldname": "month_year",
+   "fieldtype": "Data",
+   "label": "Month-Year",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-06-07 08:10:34.044786",
+ "modified_by": "Administrator",
+ "module": "Feet On Street",
+ "name": "CFL Center Performance",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    cs.cfl_center as center_name,\n    cs.district,\n    cs.region,\n    COUNT(cs.name) as total_sessions,\n    COUNT(DISTINCT cs.village) as villages_covered,\n    SUM(cs.participant_count) as total_participants,\n    AVG(cs.participant_count) as avg_participants_per_session,\n    COUNT(CASE WHEN cs.docstatus = 1 THEN 1 END) as submitted_sessions,\n    COUNT(CASE WHEN cs._state = 'Approved' THEN 1 END) as approved_sessions,\n    (COUNT(CASE WHEN cs._state = 'Approved' THEN 1 END) * 100.0 / COUNT(cs.name)) as approval_rate,\n    MAX(cs.date) as last_session_date\nFROM \n    `tabCFL Session` cs\nWHERE \n    (%(region)s IS NULL OR cs.region = %(region)s)\n    AND (%(month_year)s IS NULL OR DATE_FORMAT(cs.date, '%Y-%m') = %(month_year)s)\nGROUP BY \n    cs.cfl_center, cs.district, cs.region\nORDER BY \n    total_sessions DESC",
+ "ref_doctype": "CFL Center",
+ "report_name": "CFL Center Performance",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}
