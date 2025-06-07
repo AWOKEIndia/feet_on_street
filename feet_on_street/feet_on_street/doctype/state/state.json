@@ -1,44 +1,65 @@
 {
- "naming_rule": "By fieldname",
+ "actions": [],
  "autoname": "field:state_code",
  "creation": "2025-04-04 13:15:05.646683",
  "doctype": "DocType",
  "engine": "InnoDB",
+ "field_order": [
+  "state_code",
+  "state_name",
+  "state_name_hindi"
+ ],
  "fields": [
   {
+   "description": "2-digit census code like 09 for UP, 10 for Bihar",
    "fieldname": "state_code",
    "fieldtype": "Data",
    "label": "State Code (Census 2011)",
    "reqd": 1,
-   "unique": 1,
-   "description": "2-digit census code like 09 for UP, 10 for Bihar"
+   "unique": 1
   },
   {
    "fieldname": "state_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "State Name",
-   "reqd": 1,
-   "in_list_view": 1
+   "reqd": 1
   },
   {
    "fieldname": "state_name_hindi",
    "fieldtype": "Data",
    "label": "State Name (Hindi)"
-  },
-  {
-   "fieldname": "zone",
-   "fieldtype": "Select",
-   "options": "Northern\nSouthern\nEastern\nWestern\nCentral\nNorth-Eastern",
-   "label": "Geographic Zone"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-05 13:35:03.075456",
+ "modified": "2025-06-07 15:23:53.831233",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "State",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
- "title_field": "state_name"
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "state_name",
+ "track_changes": 1
 }
