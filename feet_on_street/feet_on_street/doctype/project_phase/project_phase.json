@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "project_phase",
+  "abbr",
   "column_break_nvta",
   "company"
  ],
@@ -31,11 +32,17 @@
    "label": "Company",
    "options": "Company",
    "reqd": 1
+  },
+  {
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "label": "Abbr",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-01 12:06:34.158423",
+ "modified": "2025-06-07 14:36:38.635772",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Project Phase",
