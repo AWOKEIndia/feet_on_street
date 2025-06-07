@@ -43,7 +43,6 @@
    "fieldtype": "Link",
    "label": "State",
    "options": "State",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -61,7 +60,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-07 14:24:03.448691",
+ "modified": "2025-06-07 17:32:56.148228",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Region",
