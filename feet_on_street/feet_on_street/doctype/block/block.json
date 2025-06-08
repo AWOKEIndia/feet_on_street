@@ -7,13 +7,11 @@
  "engine": "InnoDB",
  "field_order": [
   "block_code",
-  "full_block_code",
   "block_name",
   "block_name_hindi",
-  "district",
+  "column_break_qnkz",
   "cfl_center",
-  "block_type",
-  "population_2011"
+  "district"
  ],
  "fields": [
   {
@@ -23,13 +21,6 @@
    "label": "Block Code (Census 2011)",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "description": "State + District + Block Code (e.g., 090010001)",
-   "fieldname": "full_block_code",
-   "fieldtype": "Data",
-   "label": "Full Block Code",
-   "read_only": 1
   },
   {
    "fieldname": "block_name",
@@ -44,6 +35,8 @@
    "label": "Block Name (Hindi)"
   },
   {
+   "fetch_from": "cfl_center.district",
+   "fetch_if_empty": 1,
    "fieldname": "district",
    "fieldtype": "Link",
    "label": "District",
@@ -58,21 +51,14 @@
    "reqd": 1
   },
   {
-   "default": "Rural",
-   "fieldname": "block_type",
-   "fieldtype": "Select",
-   "options": "Rural\nUrban"
-  },
-  {
-   "fieldname": "population_2011",
-   "fieldtype": "Int",
-   "label": "Population (Census 2011)"
+   "fieldname": "column_break_qnkz",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-07 16:34:56.125524",
+ "modified": "2025-06-08 09:10:04.579658",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Block",
