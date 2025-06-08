@@ -16,17 +16,12 @@
   "feedback",
   "geographical_data_section",
   "village",
-  "village_name",
   "block",
-  "block_name",
   "column_break_zmsi",
   "cfl_center",
-  "cfl_name",
   "district",
-  "district_name",
   "column_break_sxmw",
   "region",
-  "region_name",
   "company",
   "section_break_aiqi",
   "gps_location",
@@ -186,15 +181,6 @@
    "label": "GPS location"
   },
   {
-   "fetch_from": "block.block_name",
-   "fetch_if_empty": 1,
-   "fieldname": "block_name",
-   "fieldtype": "Link",
-   "label": "Block Name",
-   "options": "Block",
-   "read_only": 1
-  },
-  {
    "fetch_from": "village.block",
    "fetch_if_empty": 1,
    "fieldname": "block",
@@ -206,50 +192,13 @@
   {
    "fieldname": "column_break_zmsi",
    "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "cfl_center.center_name",
-   "fetch_if_empty": 1,
-   "fieldname": "cfl_name",
-   "fieldtype": "Link",
-   "label": "CFL Center Name",
-   "options": "CFL Center",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "district.district_name",
-   "fetch_if_empty": 1,
-   "fieldname": "district_name",
-   "fieldtype": "Link",
-   "label": "District Name",
-   "options": "District",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "region.region_name",
-   "fetch_if_empty": 1,
-   "fieldname": "region_name",
-   "fieldtype": "Link",
-   "label": "Region Name",
-   "options": "Region",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "village.village_name",
-   "fetch_if_empty": 1,
-   "fieldname": "village_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Village Name",
-   "options": "Village",
-   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-06-08 11:29:30.132846",
+ "modified": "2025-06-08 11:43:36.330647",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "CFL Session",
@@ -275,8 +224,6 @@
    "write": 1
   }
  ],
- "protect_attached_files": 1,
- "quick_entry": 1,
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",

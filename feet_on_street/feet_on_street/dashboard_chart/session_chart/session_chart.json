@@ -14,7 +14,8 @@
  "idx": 0,
  "is_public": 0,
  "is_standard": 1,
- "modified": "2025-06-07 15:29:23.730927",
+ "last_synced_on": "2025-06-08 12:27:40.522839",
+ "modified": "2025-06-08 12:28:23.629575",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Session Chart",
@@ -26,7 +27,7 @@
  "time_interval": "Yearly",
  "timeseries": 0,
  "timespan": "Last Year",
- "type": "Heatmap",
+ "type": "Bar",
  "use_report_chart": 0,
  "value_based_on": "",
  "y_axis": []
