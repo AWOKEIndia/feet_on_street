@@ -20,34 +20,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Survey Management",
-   "link_count": 2,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "CFL Session",
-   "link_count": 0,
-   "link_to": "CFL Session",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "New CFL Session",
-   "link_count": 0,
-   "link_to": "CFL Session",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Geographic Setup",
    "link_count": 6,
    "onboard": 0,
@@ -169,9 +141,28 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Survey Management",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CFL Session",
+   "link_count": 0,
+   "link_to": "CFL Session",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-06-07 15:31:04.386146",
+ "modified": "2025-06-08 11:31:38.077055",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Feet On Street",
