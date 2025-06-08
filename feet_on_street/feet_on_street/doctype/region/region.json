@@ -1,8 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
- "autoname": "format:{state}-{phase}-R{region_number:02d}",
+ "autoname": "format:S{state}{phase_code}R{region_number}",
  "creation": "2025-04-04 11:37:54.097162",
  "doctype": "DocType",
  "document_type": "Document",
@@ -13,7 +12,8 @@
   "company",
   "column_break_sbgg",
   "state",
-  "phase"
+  "phase",
+  "phase_code"
  ],
  "fields": [
   {
@@ -21,7 +21,8 @@
    "fieldname": "region_number",
    "fieldtype": "Int",
    "label": "Region Number",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "region_name",
@@ -35,7 +36,6 @@
    "fieldtype": "Link",
    "label": "Company",
    "options": "Company",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -55,12 +55,19 @@
   {
    "fieldname": "column_break_sbgg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "phase.abbr",
+   "fetch_if_empty": 1,
+   "fieldname": "phase_code",
+   "fieldtype": "Data",
+   "label": "Project Phase Code"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-07 17:32:56.148228",
+ "modified": "2025-06-07 17:51:42.000622",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Region",
@@ -84,5 +91,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "region_name"
+ "title_field": "region_name",
+ "track_changes": 1
 }
