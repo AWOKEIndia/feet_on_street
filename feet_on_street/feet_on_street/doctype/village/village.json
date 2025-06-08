@@ -9,13 +9,10 @@
  "engine": "InnoDB",
  "field_order": [
   "village_code",
-  "full_village_code",
   "village_name",
   "village_name_hindi",
-  "block",
-  "population_2011",
-  "literacy_rate",
-  "total_households"
+  "column_break_whsc",
+  "block"
  ],
  "fields": [
   {
@@ -25,13 +22,6 @@
    "label": "Village Code (Census 2011)",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "description": "Complete census code including state+district+block+village",
-   "fieldname": "full_village_code",
-   "fieldtype": "Data",
-   "label": "Full Village Code",
-   "read_only": 1
   },
   {
    "fieldname": "village_name",
@@ -53,25 +43,14 @@
    "reqd": 1
   },
   {
-   "fieldname": "population_2011",
-   "fieldtype": "Int",
-   "label": "Population (Census 2011)"
-  },
-  {
-   "fieldname": "literacy_rate",
-   "fieldtype": "Percent",
-   "label": "Literacy Rate (Census 2011)"
-  },
-  {
-   "fieldname": "total_households",
-   "fieldtype": "Int",
-   "label": "Total Households (Census 2011)"
+   "fieldname": "column_break_whsc",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-07 16:34:27.600209",
+ "modified": "2025-06-08 10:07:13.526027",
  "modified_by": "Administrator",
  "module": "Feet On Street",
  "name": "Village",
